@@ -1,0 +1,5 @@
+json-server --watch jsonDB.json --port 3000
+
+
+contact service ts lin 129 private base url 
+private BASE_URL = 'http://localhost:3000/contacts'

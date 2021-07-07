@@ -1,0 +1,22 @@
+<p>contact-list-element works!</p>
+<div class="serach">
+<label>Searh Contacts: </label><input [ngModel]="filter" type="text" (change)="loadContacts($event.target.value)"/>
+</div>
+{{filter}}
+ <ul >
+    <li *ngFor="let contact of contacts; let i = index;">
+      <contact-preview [contact]="contact" (removeContact)="removeContact($event)"></contact-preview>
+
+      index = {{i}}
+      <!-- <span>this is contact:</span>
+      <span>{{contact.name}}</span>
+      <span>{{contact._id}}</span> -->
+
+      <!-- <button (click)="removeContact.emit(contact._id)">x</button>
+      <button (click)="removeContact(contact._id)">x</button>
+      <a [routerLink]="['/contact/edit',contact._id]">Edit</a> -->
+    </li>
+  </ul>
+  <p>contact-list-element works!</p>
+  <router-outlet></router-outlet>
+

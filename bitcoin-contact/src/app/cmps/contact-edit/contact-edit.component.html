@@ -1,0 +1,9 @@
+<p>contact-edit works!</p>
+ {{contact}}
+  <!-- <input [value]="newPet.name" (input)="newPet.name = $event.target.value" type="text" /> --> 
+  <form (submit)="addContact($event)">
+    <input name="name" [(ngModel)]="contact.name" type="text" />
+    <input name="email" [(ngModel)]="contact.email" type="text" />
+    <input name="phone" [(ngModel)]="contact.phone" type="text" />
+    <button>Add Contact</button>
+  </form>
